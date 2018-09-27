@@ -53,7 +53,7 @@ span {
     color: #FFFFFF;
     text-decoration: none;
     display: inline-block;
-    background: linear-gradient(-90deg, rgb(162, 6, 122), rgb(3, 39, 84));
+    background: linear-gradient(90deg, rgb(3, 39, 84), rgb(162, 6, 122));
     font-size: 16px;
     padding: 15px 25px;
     border-radius: 50px;
@@ -66,14 +66,48 @@ span {
 
 header {
   width: 100%;
-  height: 60px;
-  position: absolute;
+  // .display: hidden;
+  .header-menu {
+    background: linear-gradient(90deg, rgb(3, 39, 84), rgb(162, 6, 122));
+    width: 100%;
+    position: fixed;
+    position: absolute;
+    top: 0;
+    border-bottom: #FFFFFF 1px solid;
+    .container{
+      height: 62px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      nav {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .fas {
+          padding-right: 5px;
+        }
+        li a {
+          color: #FFFFFF;
+          text-decoration: none;
+          letter-spacing: 1px;
+          margin-right: 5px;
+          &:hover {
+            color: #FEFF2A;
+          }
+        }
+      }
+      .btn a {
+        font-size: 13px;
+        padding: 8px 30px;
+      }
+  }
+  }
 }
 
 .top-wrapper {
   width: 100%;
   padding-top: 100px;
-  background: linear-gradient(-90deg, rgba(162, 6, 122, 0.7), rgba(3, 39, 84, 0.7)), url("pics/top.png");
+  background: linear-gradient(90deg, rgba(3, 39, 84, 0.7), rgba(162, 6, 122, 0.7)), url("pics/top.png");
   background-size: cover;
   .container {
     text-align: center;
@@ -159,7 +193,7 @@ header {
           font-weight: bold;
           letter-spacing: 4px;
           margin-bottom: 12px;
-          color: #FEFF2A
+          color: #FEFF2A;
         }
         p {
           line-height: 1.6;
@@ -314,146 +348,89 @@ header {
           margin-bottom: 8px;
         }
         input {
-          padding: 8px 8px;
+          padding: 8px 12px;
+          height: 40px;
           width: 100%;
-          // margin: 10px;
+          border:1px solid #ddd;
+          border-radius: 3px;
         }
         .note {
           padding-bottom: 8px;
         }
-
       }
-      .address {
+      .address-wrap {
         display: flex;
         justify-content: space-between;
         input {
           width: 39%;
+        }
+        .pref-form {
+          width: 20%;
+          position: relative;
+          &::before {
+            position: absolute;
+            right: 15px;
+            top: 0;
+            font-family: "Font Awesome 5 Free";
+            content: "\f0dc";
+            line-height: 43px;
+            color: #7F878C;
+            pointer-events: none;
+          }
+        }
+      }
+      .job-form {
+        position: relative;
+        &::before {
+          position: absolute;
+          right: 15px;
+          top: 0;
+          font-family: "Font Awesome 5 Free";
+          content: "\f0dc";
+          line-height: 43px;
+          color: #7F878C;
+          pointer-events: none;
+        }
+      }
+      .setting {
+        margin: 0 auto 30px;
+        padding-top: 10px;
+        width: 250px;
+        text-align: center;
+        .setting-radio {
+          display: flex;
+          justify-content: space-around;
+          // border: solid silver 1px;
+        }
+        p, label {
+          font-size: 14px;
+          letter-spacing: 1.8px;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+      }
+      .center {
+        text-align: center;
+        .btn {
+        color: #FFFFFF;
+        text-decoration: none;
+        display: inline-block;
+        background: linear-gradient(-90deg, rgb(162, 6, 122), rgb(3, 39, 84));
+        font-size: 16px;
+        padding: 15px 25px;
+        border-radius: 50px;
+        border: #FFFFFF solid 2px;
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }
   }
 }
 
-select{
-    outline:none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    background: none transparent;
-    vertical-align: middle;
-    font-size: inherit;
-    color: inherit;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-}
-select option{
-  background-color: #fff;
-  color: #333;
-}
-select::-ms-expand {
-  display: none;
-}
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #828c9a;
-}
 
-.job-form {
-    position: relative;
-}
-.job-form:before {
-    z-index: 1;
-    position: absolute;
-    right: 15px;
-    top: 0;
-    font-family: "Font Awesome 5 Free";
-    // content: "\f0dc";
-    content: "\f107";
-    line-height: 43px;
-    color: #7F878C;
-    pointer-events: none;
-}
-select{
-    outline:none;
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    background: none transparent;
-    vertical-align: middle;
-    font-size: inherit;
-    color: inherit;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 40px;
-    padding: 8px 12px;
-    border:1px solid #ddd;
-    color:#828c9a;
-    width:100%;
-    border-radius:3px;
-}
-select option{
-  background-color: #fff;
-  color: #333;
-}
-select::-ms-expand {
-  display: none;
-}
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #828c9a;
-}
 
-// .address-form {
-// overflow: hidden;
-// width: 20%;
-// // margin: 2em auto;
-// text-align: center;
-// }
-// .address-form select {
-// width: 100%;
-// padding-right: 1em;
-// cursor: pointer;
-// text-indent: 0.01px;
-// text-overflow: ellipsis;
-// border: none;
-// outline: none;
-// background: transparent;
-// background-image: none;
-// box-shadow: none;
-// -webkit-appearance: none;
-// appearance: none;
-// }
-// .address-form select::-ms-expand {
-// display: none;
-// }
-// .address-form {
-// position: relative;
-// border: 1px solid #dcdcdc;
-// border-radius: 3px;
-// line-height: 1.6;
-// background: #ffffff;
-// }
-// .address-form::before {
-// position: absolute;
-// top: 0.8em;
-// right: 0.9em;
-// width: 0;
-// height: 0;
-// padding: 0;
-// content: '';
-// border-left: 6px solid transparent;
-// border-right: 6px solid transparent;
-// border-top: 6px solid #666666;
-// pointer-events: none;
-// }
-// .address-form select {
-//   padding: 8px 8px;
-// color: #666666;
-// }
 
 footer {
   background: #272727;

@@ -41,7 +41,7 @@ span {
   color: #FFFFFF;
   text-decoration: none;
   display: inline-block;
-  background: linear-gradient(-90deg, #a2067a, #032754);
+  background: linear-gradient(90deg, #032754, #a2067a);
   font-size: 16px;
   padding: 15px 25px;
   border-radius: 50px;
@@ -50,14 +50,40 @@ span {
     opacity: 0.8; }
 
 header {
-  width: 100%;
-  height: 60px;
-  position: absolute; }
+  width: 100%; }
+  header .header-menu {
+    background: linear-gradient(90deg, #032754, #a2067a);
+    width: 100%;
+    position: fixed;
+    position: absolute;
+    top: 0;
+    border-bottom: #FFFFFF 1px solid; }
+    header .header-menu .container {
+      height: 62px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      header .header-menu .container nav {
+        display: flex;
+        justify-content: start;
+        align-items: center; }
+        header .header-menu .container nav .fas {
+          padding-right: 5px; }
+        header .header-menu .container nav li a {
+          color: #FFFFFF;
+          text-decoration: none;
+          letter-spacing: 1px;
+          margin-right: 5px; }
+          header .header-menu .container nav li a:hover {
+            color: #FEFF2A; }
+      header .header-menu .container .btn a {
+        font-size: 13px;
+        padding: 8px 30px; }
 
 .top-wrapper {
   width: 100%;
   padding-top: 100px;
-  background: linear-gradient(-90deg, rgba(162, 6, 122, 0.7), rgba(3, 39, 84, 0.7)), url("pics/top.png");
+  background: linear-gradient(90deg, rgba(3, 39, 84, 0.7), rgba(162, 6, 122, 0.7)), url("pics/top.png");
   background-size: cover; }
   .top-wrapper .container {
     text-align: center;
@@ -241,85 +267,67 @@ header {
         letter-spacing: 1.8px;
         margin-bottom: 8px; }
       .register-wrapper .container form .form-item input {
-        padding: 8px 8px;
-        width: 100%; }
+        padding: 8px 12px;
+        height: 40px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 3px; }
       .register-wrapper .container form .form-item .note {
         padding-bottom: 8px; }
-    .register-wrapper .container form .address {
+    .register-wrapper .container form .address-wrap {
       display: flex;
       justify-content: space-between; }
-      .register-wrapper .container form .address input {
+      .register-wrapper .container form .address-wrap input {
         width: 39%; }
-
-select {
-  outline: none;
-  text-indent: 0.01px;
-  text-overflow: '';
-  background: none transparent;
-  vertical-align: middle;
-  font-size: inherit;
-  color: inherit;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button; }
-
-select option {
-  background-color: #fff;
-  color: #333; }
-
-select::-ms-expand {
-  display: none; }
-
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #828c9a; }
-
-.job-form {
-  position: relative; }
-
-.job-form:before {
-  z-index: 1;
-  position: absolute;
-  right: 15px;
-  top: 0;
-  font-family: "Font Awesome 5 Free";
-  content: "\f107";
-  line-height: 43px;
-  color: #7F878C;
-  pointer-events: none; }
-
-select {
-  outline: none;
-  -moz-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: '';
-  background: none transparent;
-  vertical-align: middle;
-  font-size: inherit;
-  color: inherit;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  height: 40px;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  color: #828c9a;
-  width: 100%;
-  border-radius: 3px; }
-
-select option {
-  background-color: #fff;
-  color: #333; }
-
-select::-ms-expand {
-  display: none; }
-
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #828c9a; }
+      .register-wrapper .container form .address-wrap .pref-form {
+        width: 20%;
+        position: relative; }
+        .register-wrapper .container form .address-wrap .pref-form::before {
+          position: absolute;
+          right: 15px;
+          top: 0;
+          font-family: "Font Awesome 5 Free";
+          content: "\f0dc";
+          line-height: 43px;
+          color: #7F878C;
+          pointer-events: none; }
+    .register-wrapper .container form .job-form {
+      position: relative; }
+      .register-wrapper .container form .job-form::before {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        font-family: "Font Awesome 5 Free";
+        content: "\f0dc";
+        line-height: 43px;
+        color: #7F878C;
+        pointer-events: none; }
+    .register-wrapper .container form .setting {
+      margin: 0 auto 30px;
+      padding-top: 10px;
+      width: 250px;
+      text-align: center; }
+      .register-wrapper .container form .setting .setting-radio {
+        display: flex;
+        justify-content: space-around; }
+      .register-wrapper .container form .setting p, .register-wrapper .container form .setting label {
+        font-size: 14px;
+        letter-spacing: 1.8px;
+        font-weight: bold;
+        margin-bottom: 15px; }
+    .register-wrapper .container form .center {
+      text-align: center; }
+      .register-wrapper .container form .center .btn {
+        color: #FFFFFF;
+        text-decoration: none;
+        display: inline-block;
+        background: linear-gradient(-90deg, #a2067a, #032754);
+        font-size: 16px;
+        padding: 15px 25px;
+        border-radius: 50px;
+        border: #FFFFFF solid 2px; }
+        .register-wrapper .container form .center .btn:hover {
+          opacity: 0.8; }
 
 footer {
   background: #272727; }
