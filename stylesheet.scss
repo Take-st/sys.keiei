@@ -25,8 +25,24 @@ h2 {
   margin-bottom: 100px;
 }
 
-span {
+.red {
   color: red;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #FEFF2A;
+}
+
+.small {
+  font-size: 60%;
+  font-weight: bold;
+}
+
+.source {
+  font-size: 10px;
+  color: silver;
+  text-align: center;
 }
 
 .container {
@@ -36,15 +52,27 @@ span {
 
 .caption {
   text-align: center;
+  position: relative;
   h2 {
     font-size: 24px;
     letter-spacing: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   p {
     font-size: 12px;
     color: #949697;
-    letter-spacing: 0.7px;
+    letter-spacing: 1px;
+  }
+  &::before {
+    display: block;
+    content: ' ';
+    width: 84px;
+    height: 3px;
+    background: linear-gradient(90deg, rgb(3, 39, 84), rgb(162, 6, 122));
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    margin-left: -42px;
   }
 }
 
@@ -108,6 +136,10 @@ header {
   padding-top: 100px;
   background: linear-gradient(90deg, rgba(3, 39, 84, 0.7), rgba(162, 6, 122, 0.7)), url("pics/top.png");
   background-size: cover;
+  h1 {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
   .container {
     text-align: center;
     color: #FFFFFF;
@@ -177,6 +209,9 @@ header {
     padding-top: 85px;
     .caption {
       margin-bottom: 60px;
+      &::before {
+        background: #FFFFFF;
+      }
     }
     p {
       color: #FFFFFF;
@@ -252,6 +287,9 @@ header {
       line-height: 1.8;
       letter-spacing: 2.5px;
     }
+    img {
+      box-shadow: 2px 2px 4px silver;
+    }
     .flow-box1 {
       display: flex;
       justify-content: space-between;
@@ -282,6 +320,9 @@ header {
     padding-bottom: 50px;
     .caption {
       margin-bottom: 60px;
+      &::before {
+        background: #FFFFFF;
+      }
       p, h2{
         color: #FFFFFF;
       }

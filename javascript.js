@@ -28,8 +28,12 @@ $(function () {
     var radioval = $(this).val();
     if (radioval == "myself") {
       $('.manual').show();
+      $('.member-id').attr('required', 'required');
+      $('.member-password').attr('required', 'required');
     } else if (radioval == "auto") {
       $('.manual').hide();
+      $('.member-id').removeAttr('required');
+      $('.member-password').removeAttr('required');
     }
   });
 });
