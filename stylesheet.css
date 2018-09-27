@@ -50,13 +50,12 @@ span {
     opacity: 0.8; }
 
 header {
-  width: 100%; }
+  width: 100%;
+  z-index: 10;
+  position: fixed; }
   header .header-menu {
     background: linear-gradient(90deg, #032754, #a2067a);
     width: 100%;
-    position: fixed;
-    position: absolute;
-    top: 0;
     border-bottom: #FFFFFF 1px solid; }
     header .header-menu .container {
       height: 62px;

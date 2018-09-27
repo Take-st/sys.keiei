@@ -66,13 +66,12 @@ span {
 
 header {
   width: 100%;
-  // .display: hidden;
+  z-index: 10;
+  position: fixed;
   .header-menu {
     background: linear-gradient(90deg, rgb(3, 39, 84), rgb(162, 6, 122));
     width: 100%;
-    position: fixed;
-    position: absolute;
-    top: 0;
+    // position: fixed;
     border-bottom: #FFFFFF 1px solid;
     .container{
       height: 62px;
