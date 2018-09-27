@@ -76,7 +76,8 @@ h2 {
 header {
   width: 100%;
   z-index: 10;
-  position: fixed; }
+  position: fixed;
+  display: none; }
   header .header-menu {
     background: linear-gradient(90deg, #032754, #a2067a);
     width: 100%;
