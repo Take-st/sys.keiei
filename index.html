@@ -20,38 +20,38 @@
       <div class="container">
         <nav>
           <li>
-            <a href="#"><i class="fas fa-home"></i>TOP</a>
+            <a href="#top"><i class="fas fa-home"></i>TOP</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-lightbulb"></i></i>悩みを解決</a>
+            <a href="#message"><i class="fas fa-lightbulb"></i></i>悩みを解決</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-building"></i>経営マガジンとは</a>
+            <a href="#about"><i class="fas fa-building"></i>経営マガジンとは</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-envelope"></i>集客の流れ</a>
+            <a href="#flow"><i class="fas fa-envelope"></i>集客の流れ</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-sync-alt"></i>活動までの流れ</a>
+            <a href="#step"><i class="fas fa-sync-alt"></i>活動までの流れ</a>
           </li>
         </nav>
         <div class="btn">
-          <a href="#">無料登録する</a>
+          <a href="#register">無料登録する</a>
         </div>
       </div>
     </section>
   </header>
-  <section class="top-wrapper">
+  <section id="top" class="top-wrapper">
     <div class="container">
       <div class="top-message">月間5万人の経営者が訪れる、経営マガジン</div>
       <h1>貴社のノウハウ、知見を投稿して<br>セルフブランディングしませんか？</h1>
       <p>士業・経営コンサルの方を中心とした<br>BtoBのインバウンドマーケティングを支援します</p>
       <div class="btn">
-        <a href="#">無料登録して活動する</a>
+        <a href="#register">無料登録して活動する</a>
       </div>
     </div>
   </section>
-  <section class="message-wrapper">
+  <section id="message" class="message-wrapper">
     <div class="container">
       <div class=caption>
         <h2>このような悩みを解決します</h2>
@@ -97,7 +97,7 @@
       </div>
     </div>
   </section>
-  <section class="about-wrapper">
+  <section id="about" class="about-wrapper">
     <div class="container">
       <div class=caption>
         <h2>経営マガジンについて</h2>
@@ -115,7 +115,7 @@
       </div>
     </div>
   </section>
-  <section class="history-wrapper">
+  <section id="history" class="history-wrapper">
     <div class="container">
       <div class="history-box">
         <h4>サイト運営日</h4>
@@ -139,7 +139,7 @@
       </div>
     </div>
   </section>
-  <section class="flow-wrapper">
+  <section id="flow" class="flow-wrapper">
     <div class="container">
       <div class=caption>
         <h2>ブランディングから見込み客の獲得まで</h2>
@@ -176,7 +176,7 @@
       </div>
     </div>
   </section>
-  <section class="step-wrapper">
+  <section id="step" class="step-wrapper">
     <div class="container">
       <div class=caption>
         <h2>活動までの流れ</h2>
@@ -228,10 +228,7 @@
       </div>
     </div>
   </section>
-
-
-
-  <section class="register-wrapper">
+  <section id="register" class="register-wrapper">
     <div class="container">
       <div class=caption>
         <h2>無料ご登録はこちら</h2>
@@ -339,12 +336,20 @@
         <div class="setting">
           <p>会員IDとパスワード設定について</p>
           <div class="setting-radio">
-            <!-- <input type="radio" name="setting" class="auto" id="auto">
-            <label for="auto">自動発行</label> -->
-            <!-- <input type="radio" name="setting" class="myself" id="myself">
-            <label for="myself">自分で設定する</label> -->
-            <label><input type="radio" name="setting" id="auto" checked>自動発行</label>
-            <label><input type="radio" name="setting" id="myself">自分で設定する</label>
+            <label><input type="radio" name="setting" id="auto" value="auto" checked>自動発行</label>
+            <label><input type="radio" name="setting" id="myself" value="myself">自分で設定する</label>
+          </div>
+        </div>
+        <div class="manual">
+          <div class="form-item">
+            <p>会員ID<span>（必須）</span></p>
+            <div class="note">管理画面にログインするIDを設定してください</div>
+            <input type="text" name="name" placeholder="exampleid" />
+          </div>
+          <div class="form-item">
+            <p>パスワード<span>（必須）</span></p>
+            <div class="note">管理画面にログインするパスワードを設定してください</div>
+            <input type="password"" name=" name" placeholder="password" />
           </div>
         </div>
         <div class="center">
@@ -353,12 +358,6 @@
       </form>
     </div>
   </section>
-
-
-
-
-
-
   <footer>
     <div class=container>
       <div class="footer-top">

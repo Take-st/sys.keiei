@@ -327,6 +327,9 @@ header {
         border: #FFFFFF solid 2px; }
         .register-wrapper .container form .center .btn:hover {
           opacity: 0.8; }
+    .register-wrapper .container form .manual {
+      display: none;
+      margin-bottom: 20px; }
 
 footer {
   background: #272727; }
